@@ -200,7 +200,11 @@ export default function Dashboard() {
       <h3 className="text-xl font-semibold mb-3">
         {searchText ? "Search Results" : "All Available Trains"}
       </h3>
-
+      {trains.length === 0 && (
+        <div className="bg-yellow-100 text-yellow-700 p-4 rounded mb-6">
+           No trains are added by admin yet.
+        </div>
+      )}
       {searched && results.length === 0 ? (
         <div className="bg-red-100 text-red-600 p-4 rounded mb-6">
           Not found any trains.
