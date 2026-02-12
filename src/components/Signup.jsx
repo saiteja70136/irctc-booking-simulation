@@ -39,7 +39,8 @@ export default function Signup() {
     };
     console.log(user);
     localStorage.setItem("user", JSON.stringify(user));
-
+    alert("Signup successful! Please login.");
+    navigate("/");
     
   };
 
